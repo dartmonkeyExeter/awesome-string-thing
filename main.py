@@ -6,7 +6,7 @@ alphabet_and_numbers += list('0123456789!"£$%^&*()-+_=@;#<>?,./\|') # add numbe
 stuff = input() # get input
 output_string = "" # set to ''
 final_output = "" # set to ''
-for idx, i in enumerate(stuff):
+for i in stuff:
     for j in alphabet_and_numbers:
         output_string = f'{j}' # output string = the letter of the alphabet that is currently looped
         print(f'{final_output}{output_string}') # print that and the whole current word
