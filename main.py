@@ -1,16 +1,17 @@
 # hello world if it was awesome
-import time 
-alphabet_and_numbers = list(' ') # create list with a space character 
-alphabet_and_numbers += [chr(ord('a') + i) for i in range(26)] # add alphabet to the list
-alphabet_and_numbers += list('0123456789!"£$%^&*()-+_=@;#<>?,./\|') # add numbers and punctuation
-stuff = input() # get input
-output_string = "" # set to ''
-final_output = "" # set to ''
-for i in stuff:
+import time
+apostrophe = ''
+alphabet_and_numbers = list(' ')
+alphabet_and_numbers += [chr(ord('a') + i) for i in range(26)]
+alphabet_and_numbers += list(f'0123456789!{apostrophe}"£$%^&*()-+_=@;#<>?,./\|')
+stuff = input()
+output_string = ""
+final_output = ""
+for idx, i in enumerate(stuff):
     for j in alphabet_and_numbers:
-        output_string = f'{j}' # output string = the letter of the alphabet that is currently looped
-        print(f'{final_output}{output_string}') # print that and the whole current word
-        if j == i: # if that letter is the correct one, no longer loop
+        output_string = f'{j}'
+        print(f'{final_output}{output_string}')
+        if j == i:
             break
-        time.sleep(0.1) # wait a second before going to the next iteration
-    final_output += output_string # add final output to output string
+        time.sleep(0.02)
+    final_output += output_string       
