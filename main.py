@@ -1,6 +1,6 @@
 # hello world if it was awesome
 import time
-apostrophe = ''
+apostrophe = "'"
 alphabet_and_numbers = list(' ')
 alphabet_and_numbers += [chr(ord('a') + i) for i in range(26)]
 alphabet_and_numbers += list(f'0123456789!{apostrophe}"£$%^&*()-+_=@;#<>?,./\|')
@@ -14,4 +14,4 @@ for idx, i in enumerate(stuff):
         if j == i:
             break
         time.sleep(0.02)
-    final_output += output_string       
+    final_output += output_string
